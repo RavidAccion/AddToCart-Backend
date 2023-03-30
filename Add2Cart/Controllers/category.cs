@@ -36,5 +36,31 @@ namespace Add2Cart.Controllers
             var data = CategoryData.Get();
             return Ok(data);
         }
+
+        [HttpGet]
+        [Route("{Id}")]
+        public IActionResult GetcategoryById(int Id)
+        {
+            var data = CategoryData.Getcategory(Id);
+            if (data != null)
+            {
+                return Ok(data);
+            }
+
+            return NotFound($"Task with Id: {Id} was not found");
+        }
+
+        [HttpDelete]
+        [Route("{Id}/delete")]
+        public IActionResult Delete(int Id)
+        {
+            var data = CategoryData.Getcategory(Id);
+            if (data != null)
+            {
+                CategoryData.DeleteCategory(data);
+                return Ok("category Deleted");
+            }
+            return NotFound($"Task with Id: {Id} was not found");
+        }
     }
 }
