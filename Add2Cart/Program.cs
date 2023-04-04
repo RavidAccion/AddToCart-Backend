@@ -17,9 +17,10 @@ IServiceCollection serviceCollection = builder.Services.AddDbContext<DataBase>(o
 
 
 builder.Services.AddControllers();
-builder.Services.AddScoped<ICategory, CategoryService>();
+builder.Services.AddScoped<Icategory, CategoryService>();
 builder.Services.AddScoped<Iproducts, ProductClass>();
-
+builder.Services.AddScoped<Ilogin, LoginServices>();
+builder.Services.AddScoped<Icart, CartService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

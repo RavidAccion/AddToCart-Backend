@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Add2Cart.Services
 {
-    public class CategoryService : ICategory
+    public class CategoryService : Icategory
     {
         private readonly DataBase dataContext;
         public CategoryService(DataBase dbContext)
@@ -34,7 +34,7 @@ namespace Add2Cart.Services
 
     
 
-        List<Category> ICategory.Get()
+        List<Category> Icategory.Get()
         {
             return dataContext.category.ToList();
         }

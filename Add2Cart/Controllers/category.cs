@@ -2,7 +2,7 @@
 using Add2Cart.Interface;
 using Add2CartModels;
 using Microsoft.AspNetCore.Mvc;
-using static Add2Cart.Interface.ICategory;
+using static Add2Cart.Interface.Icategory;
 
 namespace Add2Cart.Controllers
 {
@@ -10,9 +10,9 @@ namespace Add2Cart.Controllers
     [ApiController]
     public class category : Controller
     {
-        private readonly ICategory CategoryData;
+        private readonly Icategory CategoryData;
 
-        public category(ICategory Data)
+        public category(Icategory Data)
         {
             CategoryData = Data;
         }

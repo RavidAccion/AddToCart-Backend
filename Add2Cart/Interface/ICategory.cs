@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Add2Cart.Interface
 {
-    public interface ICategory
+    public interface Icategory
     {
       
             Category Add(Category data);
