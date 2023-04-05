@@ -14,7 +14,10 @@ namespace Add2Cart.Db_Context
               public DbSet<Product> Product { get; set; }
               public DbSet<GetCategory> GetCategory { get;}
         
-              public DbSet<Login> User_data { get; set; }
-        public DbSet<Cart> cart_data { get; set; }
+             public DbSet<Login> User_data { get; set; }
+             public DbSet<Cart> cart_data { get; set; }
+             public DbSet<Customer> customers { get; set; }
+             public DbSet<Order> orders { get; set; }
+
     }
 }

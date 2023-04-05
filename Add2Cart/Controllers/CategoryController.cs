@@ -8,11 +8,11 @@ namespace Add2Cart.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class category : Controller
+    public class CategoryController : Controller
     {
         private readonly Icategory CategoryData;
 
-        public category(Icategory Data)
+        public CategoryController(Icategory Data)
         {
             CategoryData = Data;
         }

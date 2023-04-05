@@ -22,7 +22,7 @@ namespace Add2Cart.Controllers
         {
             CartData.AddCartData(data);
            
-            var Cart = CartData.Getbycart(data.user_id);
+            var Cart = CartData.Getbycart(data.customer_id);
             return Created("/" + Cart, Cart);
 
 

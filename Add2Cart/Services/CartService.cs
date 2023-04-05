@@ -44,7 +44,7 @@ namespace Add2Cart.Services
             List<Cart> data1 = new List<Cart>();
             foreach (var item in List)
             {
-                if (item.user_id == id)
+                if (item.customer_id == id)
                     data1.Add(item);
             }
          
