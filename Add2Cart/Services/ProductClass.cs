@@ -27,7 +27,19 @@ namespace Add2Cart.Services
             return dataContext.Product.ToList();
         }
 
- 
+        public List<Product> GetProdById(int ptodID)
+        {
+            var List = dataContext.Product.ToList();
+            List<Product> data = new List<Product>();
+            foreach (var item in List)
+            {
+                if (item.id == ptodID)
+                    data.Add(item);
+            }
+
+            return data;
+        }
+
         List<Product> Iproducts.Getbycategory(int category)
         {
             var List = dataContext.Product.ToList();

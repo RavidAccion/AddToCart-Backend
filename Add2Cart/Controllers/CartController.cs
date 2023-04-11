@@ -56,7 +56,7 @@ namespace Add2Cart.Controllers
             if (data != null)
             {
                 CartData.DeleteCart(data);
-                return Ok("Cart Item Deleted");
+                return Ok(data);
             }
             return NotFound($"Task with Id: {Id} was not found");
         }

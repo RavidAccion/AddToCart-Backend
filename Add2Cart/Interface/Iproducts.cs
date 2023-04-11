@@ -9,7 +9,7 @@ namespace Add2Cart.Interface
         List<Product> Get();
 
 
-
+        List<Product> GetProdById(int ptodID);
         List<Product> Getbycategory(int category);
     }
 }

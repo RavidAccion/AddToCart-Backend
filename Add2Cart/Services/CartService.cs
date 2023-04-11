@@ -30,13 +30,19 @@ namespace Add2Cart.Services
 
             return data2;
         }
-        public void DeleteCart(Cart data)
+        public DeleteResultSet DeleteCart(Cart data)
+            
         {
+            var resultdata = new DeleteResultSet();
             if (data != null)
             {
                 dataContext.Remove(data);
                 dataContext.SaveChanges();
+                resultdata.status = true;
+                resultdata.result = "Item deleted Successfully";
+
             }
+            return resultdata;
         }
         List<Cart> Icart.Getbycart(int id)
         {

@@ -37,11 +37,22 @@ namespace Add2Cart.Controllers
             return Ok(data);
         }
 
+        [HttpGet]
+        [Route("getProductsById/{category}")]
+        public IActionResult GetProductsbyid(int id)
+        {
+            var DatabyID = ProductData.Getbycategory(id);
+            if (DatabyID != null)
+            {
+                return Ok(DatabyID);
+            }
 
+            return NotFound($"Product With Product Id : {id} Was Not Found");
+        }
 
         [HttpGet]
         [Route("getProducts/{category}")]
-        public IActionResult GetLeavedatabyid(int category)
+        public IActionResult GetProductsByCat(int category)
         {
             var DatabyID = ProductData.Getbycategory(category);
             if (DatabyID != null)
@@ -49,7 +60,7 @@ namespace Add2Cart.Controllers
                 return Ok(DatabyID);
             }
 
-            return NotFound($"Employee With Id : {category} Was Not Found");
+            return NotFound($"Product With category Id : {category} Was Not Found");
         }
 
     }

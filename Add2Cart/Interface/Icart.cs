@@ -11,6 +11,6 @@ namespace Add2Cart.Interface
         List<Cart> Get();
         List<Cart> Getbycart(int id);
 
-        void DeleteCart(Cart data);
+        DeleteResultSet DeleteCart(Cart data);
     }
 }
